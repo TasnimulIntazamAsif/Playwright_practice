@@ -16,4 +16,7 @@ def test_google_search(page):
 
     expect(page).to_have_title(re.compile("Playwright",re.IGNORECASE))
 
+    # running command
+    # pytest test_google.py --browser=chromium --headed --screenshot=on --video=on --html=report1.html
+
 
