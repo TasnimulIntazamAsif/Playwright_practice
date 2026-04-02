@@ -1,6 +1,7 @@
 import re
 from playwright.sync_api import Page, expect
-
+from pages.iubatorg_login_page import LoginPage
+from pages.iubatorg_home_page import HomePage
 
 def test_example(page: Page) -> None:
     page.goto("https://iubat.online/")
@@ -12,3 +13,4 @@ def test_example(page: Page) -> None:
     page.get_by_role("button", name="Sign-In").click()
     page.get_by_role("link", name="View Details").first.dblclick()
     expect(page.get_by_role("heading", name="STUDENT ENROLLMENT")).to_be_visible()
+
